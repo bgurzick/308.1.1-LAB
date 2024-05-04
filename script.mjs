@@ -25,6 +25,23 @@ console.log('Are all numbers unique?', isUnique)
 //did the numbers pass all of the validation checks?
 const isValid = isSum50&&areTwoOdd&&!areLargerThan25&&isUnique;
 console.log('did the numbers pass all of the validation checks?', isValid);
+
+//#1 - Check if all numbers are divisible by 5. Cache the result in a variable.
+const divisibleBy5=((num1 % 5) && (num2 % 5) && (num3 % 5) || (num4 % 5) === 0 );
+console.log("Divisible by 5?", divisibleBy5);
+//#2 - Check if the first number is larger than the last. Cache the result in a variable.
+const larger1="num1 is larger"
+const larger4="num4 is larger"
+if ( num1 > num4) {
+    console.log('Which number is larger? ',larger1);
+} else  console.log('Which number is larger? ',larger4);
+//#3 - Accomplish the following arithmetic chain:
+        //Subtract the first number from the second number.
+        //Multiply the result by the third number.
+        //Find the remainder of dividing the result by the fourth number.
+const arithmeticChain1=((num2-num1)*num3)%num4;
+console.log("The result of the Arithmetic Chain is ",arithmeticChain1);
+
 //
 //
 //
@@ -46,7 +63,7 @@ console.log('did the numbers pass all of the validation checks?', isValid);
     //Compare the results when traveling at avg speed 55, 60, 75 mph
     //FOURTH QUESTION - Which makes the most sense for the trip?
 
-//FIRST QUESTION - How many gallons of fuel will you need for the entire trip?
+
 const distance=1500;
 const mph55=30;
 const mph60=28;
@@ -54,36 +71,51 @@ const mph75=23;
 const avgSpeed=(55+60+75)/3
 const budget=175;
 const costFuel=3;
+
 const minAmountFuel=distance/mph55;
 const amountFuel60mph=distance/mph60;
 const maxAmountFuel=distance/mph75;
 const avgAmountFuel=distance/((mph55+mph60+mph75)/3)
+
 const sufficientBudget55mph=(minAmountFuel*costFuel)<=budget;
 const sufficientBudget60mph=(amountFuel60mph*costFuel)<=budget;
 const sufficientBudget75mph=(maxAmountFuel*costFuel)<=budget;
 const sufficientBudgetAvgMph=(avgAmountFuel*costFuel)<=budget;
+
 const howLong55mph=(distance/55);
 const howLong60mph=(distance/60);
 const howLong75mph=(distance/75);
 const howLongAvg=(distance/avgSpeed);
 
 
+let firstQuestion= 'How many gallons of fuel will you need for the entire trip?'
+console.log(firstQuestion);
 console.log('Minimum amount of fuel required is ',minAmountFuel,' gallons');
 console.log('Amount of fuel required at avg speed of 60mph is ',amountFuel60mph,' gallons');
 console.log('Maximum amount of fuel required is ' ,maxAmountFuel,' gallons');
 console.log('The average amount of fuel required is ',avgAmountFuel,' gallons');
 
-//SECOND QUESTION - Will your budget be enough to cover the fuel expense?
+let secondQuestion='Will your budget be enough to cover the fuel expense?'
+console.log(secondQuestion);
 console.log('Do I have enough money for fuel if I drive avg. speed 55mph?',sufficientBudget55mph);
 console.log('Do I have enough money for fuel if I drive avg. speed 60mph?',sufficientBudget60mph);
 console.log('Do I have enough money for fuel if I drive avg. speed 75mph?',sufficientBudget75mph);
 console.log('Do I have enough money for fuel if I drive avg. speed of '+avgSpeed+'mph?', sufficientBudgetAvgMph);
 
-//THIRD QUESTION - How long will the trip take, in hours?
+let thirdQuestion='How long will the trip take, in hours?'
+console.log(thirdQuestion);
 console.log('How long will the trip take with avg. speed of 55mph? ',howLong55mph, ' hours');
 console.log('How long will the trip take with avg. speed of 60mph? ', howLong60mph, ' hours');
 console.log('How long will the trip take with avg. speed of 75mph? ', howLong75mph,' hours');
 console.log('How long will the trip take with avg. speed of '+avgSpeed+'mph?', howLongAvg,' hours');
 
+//FOURTH QUESTION - Which makes the most sense for the trip?
+let fourthQuestion='Which makes thet most sense for the trip?'
+console.log(fourthQuestion);
+console.log('60mph is the best speed because the trip will only take ',howLong60mph,' hours and come in under budget:',sufficientBudget60mph);
 
+//
+//
+//
 //part 3 part 3 part 3
+//FUTURE EXPLORATION - consider Control Flow and Functions to expedite and automate blocks of code
